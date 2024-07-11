@@ -5,6 +5,7 @@ const initialState = {
     query: '',
     totalResults: 0,
     currentPage: 1,
+    lastSearch:''
 };
 
 type State = {
@@ -12,6 +13,9 @@ type State = {
     loading: boolean;
     error: any;
     query: string;
+    totalResults: number;
+    currentPage: number;
+    lastSearch: string;
 }
 
 type Action = {
@@ -46,6 +50,11 @@ const MovieListReducer = (state: State, action: Action) => {
             return {
                 ...state,
                 currentPage: action.payload
+            };
+        case 'SET_LAST_SEARCH':
+            return {
+                ...state,
+                lastSearch: action.payload
             };
         default:
             return state;

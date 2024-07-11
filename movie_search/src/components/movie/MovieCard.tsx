@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './movieCard.css'
 
 type Movie = {
     title: string;
@@ -9,13 +10,14 @@ type Movie = {
 const MovieCard = ({ movie }: { movie: Movie }) => {
     const [owned, setOwned] = useState(false)
     return (
-        <div>
+        <div className="movie-card">
             <h2>{movie.title}</h2>
             <p>{movie.overview}</p>
-            <p>{movie.release_date}</p>
-            <label>Owned
-            <input type="checkbox" checked={owned} onChange={() => setOwned(!owned)} />
-            </label>
+            <p>Date realeased: {movie.release_date}</p>
+            <div className="checkbox-container">
+                <label>Owned </label>
+                <input type="checkbox" checked={owned} onChange={() => setOwned(!owned)} />
+            </div>
         </div>
     )
 }

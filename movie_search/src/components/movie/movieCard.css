@@ -1,0 +1,36 @@
+.movie-card {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .movie-card h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+  }
+  
+  .movie-card p {
+    margin-bottom: 10px;
+    font-size: .9em;
+  }
+  
+  .movie-card .checkbox-container {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .movie-card .checkbox-container label {
+    font-size: 1.2em;
+    margin-right: 10px;
+    order: 1;
+  }
+  
+  .movie-card input[type="checkbox"] {
+    margin-right: 5px;
+    order: 2;
+    width: 20px
+  }
