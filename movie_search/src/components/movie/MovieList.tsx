@@ -2,6 +2,7 @@ import useMovieContext from "../../hooks/useMovieContext"
 import MovieCard from "./MovieCard"
 import MoviePagination from "../pagination/MoviePagination"
 import { splitArray } from "../../utils/paginationHelper"
+import { useIsFetching } from "@tanstack/react-query";
 import "./movieList.css"
 
 const MovieList = () => {
@@ -18,11 +19,13 @@ const MovieList = () => {
         }
     }
 
+    if (useIsFetching()) return <h1>Loading...</h1>
+
     return (
         <div className="movie-list">
             <h1>MovieList</h1>
             {handleMovieArray(movies)}
-            <h3>Total Results: {totalResults}</h3>
+            {totalResults ?  <h3>Total Results: {totalResults}</h3> : null}
             <MoviePagination />
         </div>
     )

@@ -14,7 +14,7 @@ const useMovieApi = (query: string) => {
         method: 'GET',
         headers: {
             accept: 'application/json',
-            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYzAxMzY0ZDg0M2Q2MGFkNDA4MjQzNWMyMGEzM2ZkYiIsIm5iZiI6MTcyMDY0MTk5OC44MjQ0MDIsInN1YiI6IjY2OGVlOTI5MTAxZGE2NGQzOTYyMWNjOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.AWwDFuzXmsnMLWMnaucTJuE2-aqo-70iv4PkdQh41D0'
+            Authorization: `Bearer ${import.meta.env.VITE_MOVIE_DB_TOKEN}`
         }
     };
 

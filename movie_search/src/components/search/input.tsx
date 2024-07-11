@@ -4,7 +4,7 @@ import "./input.css"
 
 const Input = () => {
     const { dispatch, state } = useMovieContext()
-    const { isLoading, refetch } = useMovieApi(state.query)
+    const { refetch } = useMovieApi(state.query)
 
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault()
@@ -14,8 +14,6 @@ const Input = () => {
     const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         dispatch({ type: 'SET_QUERY', payload: event.target.value })
     }
-
-    if (isLoading) return <h3>Loading...</h3>
 
     return (
         <div className="input-container">

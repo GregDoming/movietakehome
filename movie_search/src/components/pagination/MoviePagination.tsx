@@ -1,7 +1,8 @@
-import { useState, useContext } from "react"
+import { useContext } from "react"
 import { calculateTotalPages } from "../../utils/paginationHelper"
 import { MovieListContext } from "../../contexts/MovieListContext"
 import useMovieContext from "../../hooks/useMovieContext"
+import './moviePagination.css'
 
 const MoviePagination = () => {
     const { state: { totalResults } } = useMovieContext()
@@ -16,11 +17,10 @@ const MoviePagination = () => {
 
     const handlePaginationClick = async (page: number) => {
         await dispatch({ type: 'SET_PAGE_NUMBER', payload: page })
-        // refetch()
     }
 
     return (
-        <div>
+        <div className="movie-pagination">
             {/* <button onClick={handlePrev}>Previous</button> */}
             {createButtonArray(totalPages)}
             {/* <button onClick={handleNext}>Next</button> */}
