@@ -1,49 +1,90 @@
-**Installation Prerequisites**
-Node.js (v14.x or higher) npm (v6.x or higher) or yarn (v1.x or higher) 
-Steps: 
-Clone Repository git clone https://github.com/yourusername/movie-app.git 
-cd movie-app 
-npm install
+# Movie App
 
-**Technologies:** 
-React 18.3.1 Vite Typescript Jest React Query v5
+A React-based application to search and manage your movie collection.
 
-**Features:** 
-Movie Search: Search for a movie by keyword Search displays a list of movies matching keyword with movie title, movie overview and movie release date  
-Pagination: Results are paginated at 10 results per page
-Owned checkbox: User can save a list of the movies they own which will persist in localstorage
-API: API calls are cached (10 minutes)
-State Management: Using the provider pattern with React context
+## Installation Prerequisites
 
-**API**
-The API is found here (https://developer.themoviedb.org/reference/search-movie). We are using the GET Movie api call under the SEARCH Collection. The GET call will return a list of 20 movies. Multiple API calls are required to get entire list which will get fired when 
-the user changes the page using pagination.
+- **Node.js** (v14.x or higher)
+- **npm** (v6.x or higher) or **yarn** (v1.x or higher)
 
-Here is an Example of the retrun:
+## Installation Steps
 
-<img width="578" alt="image" src="https://github.com/user-attachments/assets/292de4eb-e25e-4ef2-8f15-1c1d46b21e62">
+1. **Clone Repository**
+    ```bash
+    git clone https://github.com/yourusername/movie-app.git
+    cd movie-app
+    ```
 
-Here is are the query params for the GET call:
+2. **Install Dependencies**
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-<img width="548" alt="image" src="https://github.com/user-attachments/assets/8edac1c0-0798-4d56-b537-e70e898c5c6b">
+## Technologies Used
 
-For local development it is recommended to sign up and get an api access token if multiple developers will be working on project.
+- **React** 18.3.1
+- **Vite**
+- **TypeScript**
+- **Jest**
+- **React Query** v5
 
+## Features
 
+- **Movie Search:** 
+  - Search for a movie by keyword.
+  - Displays a list of movies matching the keyword with movie title, overview, and release date.
 
-The movie id **CAN** change so make sure to hit the GET Movie List API call uinder the CHANGES section periodically to get a list of the changed movie id's top update any DB that is storing them.
+- **Pagination:** 
+  - Results are paginated with 10 results per page.
 
-**Notable Files**
+- **Owned Checkbox:** 
+  - Users can save a list of the movies they own, which persists in local storage.
 
-_useMovieApi_: In the hooks directory is a hook that houses our API logic and API call caching. It also has a listener for changes to currentPage in state which will make the relevant GET call
+- **API Caching:** 
+  - API calls are cached for 10 minutes.
 
-_urlGeneratorHelper_: In the utls directory. To add more query parameters to GET movies api call changes should be made here 
+- **State Management:** 
+  - Using the provider pattern with React context.
 
-**Enhancements:**
+## API
 
-Adding Favorites and Wishlist checkboxes
+We use the [The Movie Database (TMDB) API](https://developer.themoviedb.org/reference/search-movie) for movie data. The app makes a GET call under the SEARCH collection, which returns a list of 20 movies. Multiple API calls are made to get the entire list as the user paginates.
 
-Adding a user page that could display the different "Favorites" , "Wishlist", and "Owned" movies of a user (make sure to add a feature to check movie id's if we are persisting movies https://developer.themoviedb.org/reference/changes-movie-list) 
+### Example Response
 
+![Example Response](https://github.com/user-attachments/assets/292de4eb-e25e-4ef2-8f15-1c1d46b21e62)
 
+### Query Parameters for GET Call
 
+![Query Parameters](https://github.com/user-attachments/assets/8edac1c0-0798-4d56-b537-e70e898c5c6b)
+
+### API Token
+
+For local development, it is recommended to sign up and get an API access token if multiple developers are working on the project.
+
+### Note on Movie IDs
+
+The movie IDs **can** change, so make sure to periodically hit the GET Movie List API call under the CHANGES section to update any databases storing them.
+
+## Notable Files
+
+- **useMovieApi:** 
+  - Located in the `hooks` directory. This hook contains our API logic and caching. It also listens for changes to the current page in the state and makes the relevant GET call.
+
+- **urlGeneratorHelper:** 
+  - Located in the `utils` directory. To add more query parameters to GET movie API calls, make changes here.
+
+## Enhancements
+
+- **Favorites and Wishlist Checkboxes:** 
+  - Adding checkboxes to mark movies as favorites or add them to a wishlist.
+
+- **User Page:** 
+  - A user page to display different categories like "Favorites", "Wishlist", and "Owned" movies.
+  - Ensure to add a feature to check movie IDs if persisting movies. Refer to [TMDB API](https://developer.themoviedb.org/reference/changes-movie-list).
+
+---
+
+Feel free to contribute to this project by forking the repository and creating pull requests. For any issues or feature requests, please open an issue on GitHub.
