@@ -1,6 +1,6 @@
 # Movie App
 
-A React-based application to search and manage your movie collection.
+A React-based application for searching and managing your movie collection.
 
 ## Installation Prerequisites
 
@@ -48,7 +48,7 @@ A React-based application to search and manage your movie collection.
 - **State Management:** 
   - Using the provider pattern with React context.
 
-## API
+## API Integration
 
 We use the [The Movie Database (TMDB) API](https://developer.themoviedb.org/reference/search-movie) for movie data. The app makes a GET call under the SEARCH collection, which returns a list of 20 movies. Multiple API calls are made to get the entire list as the user paginates.
 
@@ -77,6 +77,14 @@ The movie IDs **can** change, so make sure to periodically hit the GET Movie Lis
   - Located in the `utils` directory. To add more query parameters to GET movie API calls, make changes here.
 
 ## Enhancements
+
+- **Testing:**
+  - Run tests before committing any code to ensure functionality:
+    ```bash
+    npm test
+    # or
+    yarn test
+    ```
 
 - **Favorites and Wishlist Checkboxes:** 
   - Adding checkboxes to mark movies as favorites or add them to a wishlist.
