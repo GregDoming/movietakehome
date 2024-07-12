@@ -24,9 +24,9 @@ const MovieList = () => {
     return (
         <div className="movie-list">
             <h1>MovieList</h1>
+            <MoviePagination />
             {handleMovieArray(movies)}
             {totalResults ?  <h3>Total Results: {totalResults}</h3> : null}
-            <MoviePagination />
         </div>
     )
 }

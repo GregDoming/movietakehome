@@ -10,7 +10,6 @@ const initialState = {
 
 type State = {
     movies: any[];
-    loading: boolean;
     error: any;
     query: string;
     totalResults: number;

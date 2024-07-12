@@ -23,7 +23,6 @@ const useMovieApi = (query: string) => {
 
     const fetchMovies = async () => {
         const response = await axios.get(url, options);
-        console.log(response.data);
         return response.data;
     }
 
