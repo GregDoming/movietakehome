@@ -46,9 +46,10 @@ const useMovieApi = (query: string) => {
         onError: (error: any) => {
             dispatch({ type: SET_ERROR, payload: error });
         },
+        initialData: { results: [], total_results: 0 }
     } as QueryOptions);
 
-    //structor of return value from, movies is messy so ignoring typscript complaints about it in this file. If there was more control over
+    //structore of return value from, movies is messy so ignoring typscript complaints about it in this file. If there was more control over
     //the api response I would have a more structured data type
 
     useEffect(() => {

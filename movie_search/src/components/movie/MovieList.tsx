@@ -1,13 +1,14 @@
+import React from "react"
 import useMovieContext from "../../hooks/useMovieContext"
 import MovieCard from "./MovieCard"
 import MoviePagination from "../pagination/MoviePagination"
 import { splitArray } from "../../utils/paginationHelper"
-import { useIsFetching } from "@tanstack/react-query";
+// import { useIsFetching } from "@tanstack/react-query";
 import "./movieList.css"
 
 const MovieList = () => {
     const { state: { movies, totalResults, currentPage }} = useMovieContext()
-
+   
     const handleMovieArray = (movies: []) => {
         const splitResult = splitArray(movies);
         const firstHalfArr = splitResult ? splitResult.firstArr : [];
@@ -19,7 +20,8 @@ const MovieList = () => {
         }
     }
 
-    if (useIsFetching()) return <h1>Loading...</h1>
+    //was causeing unecessary re-renders out scope to fix
+    // if (useIsFetching()) return <h1>Loading...</h1>
 
     return (
         <div className="movie-list">
@@ -33,4 +35,4 @@ const MovieList = () => {
     )
 }
 
-export default MovieList
+export default React.memo(MovieList)
