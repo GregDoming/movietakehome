@@ -1,30 +1,30 @@
-# React + TypeScript + Vite
+Installation
+Prerequisites:
+Node.js (v14.x or higher)
+npm (v6.x or higher) or yarn (v1.x or higher)
+Steps:
+Clone Repository
+git clone https://github.com/yourusername/movie-app.git
+cd movie-app
+npm install
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Technologies:
+React 18.3.1
+Vite
+Typescript
+Jest
+React Query v5
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+Features:
+Movie Search: Search for a movie by keyword
+Search displays a list of movies matching keyword with movie title, movie overview and movie release date
+User can save a list of the movies they own which will persist in localstorage
+API calls are cached (10 minutes)
+API Reference:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The API is found here https://developer.themoviedb.org/reference/discover-movie.
+We are using the GET Movie api call under the SEARCH Collection.
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Enhancements:
