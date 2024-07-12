@@ -4,6 +4,7 @@ import { MovieListContext } from '../contexts/MovieListContext';
 import { useQuery } from "@tanstack/react-query";
 import { movieUrlEditor } from '../utils/urlGeneratorHelper';
 import useMovieContext from './useMovieContext';
+import { SET_ERROR, SET_MOVIES } from '../reducer/actionTypes';
 
 const useMovieApi = (query: string) => {
     const { dispatch } = useContext(MovieListContext);
@@ -33,13 +34,13 @@ const useMovieApi = (query: string) => {
         staleTime: 1000 * 60 * 5, // 5 minutes
         cacheTime: 1000 * 60 * 10, // 10 minutes
         onError: (error: any) => {
-            dispatch({ type: 'SET_ERROR', payload: error });
+            dispatch({ type: SET_ERROR, payload: error });
         },
     });
 
     useEffect(() => {
         if (data?.results?.length) {
-            dispatch({ type: 'SET_MOVIES', payload: { movies: data.results, totalResults: data.total_results } });
+            dispatch({ type: SET_MOVIES, payload: { movies: data.results, totalResults: data.total_results } });
         }
     }, [data])
 

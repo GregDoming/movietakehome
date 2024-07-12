@@ -1,5 +1,6 @@
 import useMovieContext from "../../hooks/useMovieContext"
 import useMovieApi from "../../hooks/useMovieApi"
+import { SET_QUERY } from "../../reducer/actionTypes"
 import "./input.css"
 
 const Input = () => {
@@ -12,7 +13,7 @@ const Input = () => {
     }
 
     const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        dispatch({ type: 'SET_QUERY', payload: event.target.value })
+        dispatch({ type: SET_QUERY, payload: event.target.value })
     }
 
     return (

@@ -1,9 +1,11 @@
+import { SET_QUERY, SET_PAGE_NUMBER, SET_MOVIES, SET_ERROR } from './actionTypes';
+
 const initialState = {
     movies: [],
-    loading: false,
     query: '',
     totalResults: 0,
     currentPage: 1,
+    error: ''
 };
 
 type State = {
@@ -22,31 +24,26 @@ type Action = {
 
 const MovieListReducer = (state: State, action: Action) => {
     switch (action.type) {
-        case 'SET_MOVIES':
+        case SET_MOVIES:
             return {
                 ...state,
                 movies: action.payload.movies,
                 totalResults: action.payload.totalResults
             };
-        case 'SET_LOADING':
-            return {
-                ...state,
-                loading: action.payload
-            };
-        case 'SET_ERROR':
-            return {
-                ...state,
-                error: action.payload
-            };
-        case 'SET_QUERY':
+        case SET_QUERY:
             return {
                 ...state,
                 query: action.payload
             };
-        case 'SET_PAGE_NUMBER':
+        case SET_PAGE_NUMBER:
             return {
                 ...state,
                 currentPage: action.payload
+            };
+            case SET_ERROR:
+            return {
+                ...state,
+                error: action.payload
             };
         default:
             return state;
