@@ -50,7 +50,7 @@ A React-based application for searching and managing your movie collection.
   - API calls are cached for 10 minutes.
 
 - **State Management:** 
-  - Using the provider pattern with React context.
+  - Using the provider pattern with React context. Not neccesary for requirements but nice to have assuming app will grow.
 
 ## API Integration
 
@@ -66,8 +66,7 @@ We use the [The Movie Database (TMDB) API](https://developer.themoviedb.org/refe
 
 ### API Token
 
-For local development, it is recommended to sign up and get an API access token if multiple developers are working on the project.
-Place your new API token in .env file under "VITE_MOVIE_DB_TOKEN
+For local development, it is recommended to sign up and get an API access token if multiple developers are working on the project. Place your new API token in `.env` file under `VITE_MOVIE_DB_TOKEN`.
 
 ### Note on Movie IDs
 
@@ -81,16 +80,15 @@ The movie IDs **can** change, so make sure to periodically hit the GET Movie Lis
 - **urlGeneratorHelper:** 
   - Located in the `utils` directory. To add more query parameters to GET movie API calls, make changes here.
 
-  ## Testing
+## Testing
 
-  - **Testing:**
+- **Testing:**
   - Run tests before committing any code to ensure functionality:
     ```bash
     npm test
     # or
     yarn test
     ```
-
 
 ## Enhancements
 
@@ -101,6 +99,35 @@ The movie IDs **can** change, so make sure to periodically hit the GET Movie Lis
   - A user page to display different categories like "Favorites", "Wishlist", and "Owned" movies.
   - Ensure to add a feature to check movie IDs if persisting movies. Refer to [TMDB API](https://developer.themoviedb.org/reference/changes-movie-list).
 
+- **Dark Mode:** 
+  - Add a toggle switch to enable dark mode for the application.
+
+- **Movie Details Page:** 
+  - Create a detailed view for each movie that displays additional information such as cast, crew, ratings, and trailers.
+
+- **User Authentication:** 
+  - Implement user authentication using JWT. Users can sign up, log in, and manage their movie collections.
+
+- **Search History:** 
+  - Keep a history of recent searches and allow users to quickly repeat a previous search.
+
+- **Responsive Design:** 
+  - Ensure the application is fully responsive and works well on all device sizes.
+
+- **Improved UI/UX:** 
+  - Enhance the user interface and experience with animations and better styling.
+  - 
+- **Highlighting current pagination page:** 
+  - Better user experience
+    
+- **Pagination:**
+  - Add a previous and next to pagination
+  - For results that have a lot of pages only show 5ish pagination buttons and add a ...to jump to a page
+  - When on a page prefetch the next and previous page (if exists) 
 ---
 
 Feel free to contribute to this project by forking the repository and creating pull requests. For any issues or feature requests, please open an issue on GitHub.
+
+---
+
+By incorporating these additional features and enhancements, you can make your Movie App more user-friendly, feature-rich, and visually appealing.
