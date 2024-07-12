@@ -25,7 +25,7 @@ const MovieList = () => {
 
     return (
         <div className="movie-list">
-            <h1>MovieList</h1>
+            <h1>Movie List</h1>
             <MoviePagination keyPrefix="movieList1"/>
             {handleMovieArray(movies)}
             {totalResults ?  <h3>Total Results: {totalResults}</h3> : null}
