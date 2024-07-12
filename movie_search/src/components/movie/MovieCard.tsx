@@ -10,6 +10,7 @@ interface Movie {
 
 const MovieCard = ({ movie }: { movie: Movie }) => {
   const [owned, setOwned] = useState(false);
+  const urlToMovie = `https://www.themoviedb.org/movie/${movie.id}`;
 
   // Function to save the "owned" state to local storage
   const saveToLocalStorage = (ownedState: boolean) => {
@@ -40,6 +41,7 @@ const MovieCard = ({ movie }: { movie: Movie }) => {
       <h2>{movie.title}</h2>
       <p>{movie.overview}</p>
       <p>Date released: {movie.release_date}</p>
+      <a href={urlToMovie}>To Movie Page</a>
       <div className="checkbox-container">
         <label htmlFor={`owned-checkbox-${movie.id}`}>Owned </label>
         <input

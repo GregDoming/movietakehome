@@ -18,9 +18,9 @@ const Input = () => {
 
     return (
         <div className="input-container">
-            <form onSubmit={(event) => handleSubmit(event)}>
+            <form  onSubmit={(event) => handleSubmit(event)}>
                 <label htmlFor="movieName">Movie Search</label>
-                <input placeholder="Enter name of movie to search..." type="text" id="movieName" onChange={event => handleOnChange(event)} />
+                <input autoComplete="off" placeholder="Enter name of movie to search..." type="text" id="movieName" onChange={event => handleOnChange(event)} />
                 <button type="submit">Submit</button>
             </form>
         </div>
