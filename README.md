@@ -116,6 +116,7 @@ The movie IDs **can** change, so make sure to periodically hit the GET Movie Lis
 
 - **Improved UI/UX:** 
   - Enhance the user interface and experience with animations and better styling.
+  - Add loading spinner to increase User Experience for users with slower connections (react query isfetfching was causing toon many rerenders and out of scope to fix) 
   - 
 - **Highlighting current pagination page:** 
   - Better user experience
