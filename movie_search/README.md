@@ -63,6 +63,7 @@ We use the [The Movie Database (TMDB) API](https://developer.themoviedb.org/refe
 ### API Token
 
 For local development, it is recommended to sign up and get an API access token if multiple developers are working on the project.
+Place your new API token in .env file under "VITE_MOVIE_DB_TOKEN
 
 ### Note on Movie IDs
 
