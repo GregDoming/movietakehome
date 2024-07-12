@@ -13,6 +13,10 @@ A React-based application for searching and managing your movie collection.
     ```bash
     git clone https://github.com/yourusername/movie-app.git
     cd movie-app
+    npm install
+    npm run build
+    npm run dev
+    navigate to http://localhost:5173/
     ```
 
 2. **Install Dependencies**
@@ -77,15 +81,18 @@ The movie IDs **can** change, so make sure to periodically hit the GET Movie Lis
 - **urlGeneratorHelper:** 
   - Located in the `utils` directory. To add more query parameters to GET movie API calls, make changes here.
 
-## Enhancements
+  ## Testing
 
-- **Testing:**
+  - **Testing:**
   - Run tests before committing any code to ensure functionality:
     ```bash
     npm test
     # or
     yarn test
     ```
+
+
+## Enhancements
 
 - **Favorites and Wishlist Checkboxes:** 
   - Adding checkboxes to mark movies as favorites or add them to a wishlist.
