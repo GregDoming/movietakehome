@@ -19,6 +19,8 @@ const MovieList = () => {
         }
     }
 
+    console.log(useIsFetching())
+
     if (useIsFetching()) return <h1>Loading...</h1>
 
     return (
