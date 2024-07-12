@@ -123,7 +123,8 @@ The movie IDs **can** change, so make sure to periodically hit the GET Movie Lis
 - **Pagination:**
   - Add a previous and next to pagination
   - For results that have a lot of pages only show 5ish pagination buttons and add a ...to jump to a page
-  - When on a page prefetch the next and previous page (if exists) 
+  - When on a page prefetch the next and previous page (if exists)
+  - Add logic to handle if user presses multiple pagination buttons in quick succession.
 ---
 
 Feel free to contribute to this project by forking the repository and creating pull requests. For any issues or feature requests, please open an issue on GitHub.
