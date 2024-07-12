@@ -6,4 +6,9 @@ Features: Movie Search: Search for a movie by keyword Search displays a list of 
 
 The API is found here https://developer.themoviedb.org/reference/discover-movie. We are using the GET Movie api call under the SEARCH Collection.
 
+Here is an Example of the retrun:
+
+<img width="578" alt="image" src="https://github.com/user-attachments/assets/292de4eb-e25e-4ef2-8f15-1c1d46b21e62">
+
+
 Enhancements:
