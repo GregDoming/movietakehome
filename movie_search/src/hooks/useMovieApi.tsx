@@ -43,6 +43,8 @@ const useMovieApi = (query: string) => {
         }
     }, [data])
 
+
+    //Listens to currentPage changes refetches data with new page number and updates state
     useEffect(() => {
         (async () => {
             if (isFirstRender.current) {
