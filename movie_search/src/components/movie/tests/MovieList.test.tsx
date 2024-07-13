@@ -47,7 +47,7 @@ describe('MovieList', () => {
       secondArr: [mockMovies[2]]
     });
     render(<MovieList />);
-    expect(screen.getByText('MovieList')).toBeInTheDocument();
+    expect(screen.getByText('Movie List')).toBeInTheDocument();
     expect(screen.getByText('Inception')).toBeInTheDocument();
     expect(screen.getByText('The Matrix')).toBeInTheDocument();
     expect(screen.getByText('Total Results: 3')).toBeInTheDocument();

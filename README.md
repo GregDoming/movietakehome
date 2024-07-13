@@ -12,7 +12,7 @@ A React-based application for searching and managing your movie collection.
 1. **Clone Repository**
     ```bash
     git clone https://github.com/yourusername/movie-app.git
-    cd movie-app
+    cd movie_search
     npm install
     npm run build
     npm run dev
@@ -116,6 +116,7 @@ The movie IDs **can** change, so make sure to periodically hit the GET Movie Lis
 
 - **Improved UI/UX:** 
   - Enhance the user interface and experience with animations and better styling.
+  - Add loading spinner to increase User Experience for users with slower connections (react query isfetfching was causing toon many rerenders and out of scope to fix) 
   - 
 - **Highlighting current pagination page:** 
   - Better user experience
@@ -124,7 +125,11 @@ The movie IDs **can** change, so make sure to periodically hit the GET Movie Lis
   - Add a previous and next to pagination
   - For results that have a lot of pages only show 5ish pagination buttons and add a ...to jump to a page
   - When on a page prefetch the next and previous page (if exists)
-  - Add logic to handle if user is pressing pagination buttons in quick succession
+  - Add logic to handle if user presses multiple pagination buttons in quick succession.
+
+  -**Sorting/Filtering:**
+    - Add filtering options for results per page, and by any data we have from the return of the movie. Title/Year Etc.
+  
 ---
 
 Feel free to contribute to this project by forking the repository and creating pull requests. For any issues or feature requests, please open an issue on GitHub.

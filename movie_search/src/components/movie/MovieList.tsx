@@ -1,4 +1,3 @@
-import React from "react"
 import useMovieContext from "../../hooks/useMovieContext"
 import MovieCard from "./MovieCard"
 import MoviePagination from "../pagination/MoviePagination"
@@ -40,4 +39,4 @@ const MovieList = () => {
     )
 }
 
-export default React.memo(MovieList);
+export default MovieList;
