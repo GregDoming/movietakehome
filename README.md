@@ -12,7 +12,7 @@ A React-based application for searching and managing your movie collection.
 1. **Clone Repository**
     ```bash
     git clone https://github.com/yourusername/movie-app.git
-    cd movie-app
+    cd movie_search
     npm install
     npm run build
     npm run dev
