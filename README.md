@@ -126,6 +126,10 @@ The movie IDs **can** change, so make sure to periodically hit the GET Movie Lis
   - For results that have a lot of pages only show 5ish pagination buttons and add a ...to jump to a page
   - When on a page prefetch the next and previous page (if exists)
   - Add logic to handle if user presses multiple pagination buttons in quick succession.
+
+  -**Sorting/Filtering:**
+    - Add filtering options for results per page, and by any data we have from the return of the movie. Title/Year Etc.
+  
 ---
 
 Feel free to contribute to this project by forking the repository and creating pull requests. For any issues or feature requests, please open an issue on GitHub.
