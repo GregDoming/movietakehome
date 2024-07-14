@@ -18,6 +18,7 @@ A React-based application for searching and managing your movie collection.
     npm run dev
     navigate to http://localhost:5173/
     ```
+    Make sure to use the Develop branch
 
 2. **Install Dependencies**
     ```bash
