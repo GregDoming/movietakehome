@@ -1,5 +1,5 @@
 # Movie App
-**Hello Mercury this is a recent take home I did. There is NO STYLING so please don't judge the jankiness.**
+**Hello Mercury this is a Readme.md for a takehome I did**
 
 A React-based application for searching and managing your movie collection.
 
