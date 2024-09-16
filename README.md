@@ -1,5 +1,6 @@
 # Movie App
 
+
 A React-based application for searching and managing your movie collection.
 
 ## Installation Prerequisites
